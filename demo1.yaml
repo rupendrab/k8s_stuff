@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo
+  labels:
+    app: demo
+    broken: 'yes'
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+    - name: centos
+      image: centos
+      command: ["sleep", "3600"]
